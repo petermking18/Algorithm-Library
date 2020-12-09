@@ -74,7 +74,7 @@ void TSP::display(){
     cout << endl << endl;
 }
 void TSP::stats(){
-    cout << "Stats:\n\t";
+    cout << "TSP Stats:\n\t";
     //1.00000000
     //1000000.00
     long conversion = 1000000.0;

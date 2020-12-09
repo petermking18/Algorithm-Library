@@ -32,6 +32,10 @@ CMakeFiles/Code.dir/TSP.cpp.o: ../TSP.h
 CMakeFiles/Code.dir/main.cpp.o: ../Algorithm.h
 CMakeFiles/Code.dir/main.cpp.o: ../FileRead.h
 CMakeFiles/Code.dir/main.cpp.o: ../FileWrite.h
+CMakeFiles/Code.dir/main.cpp.o: ../Search.h
+CMakeFiles/Code.dir/main.cpp.o: ../SearchAlgorithms.h
+CMakeFiles/Code.dir/main.cpp.o: ../Sort.h
+CMakeFiles/Code.dir/main.cpp.o: ../SortAlgorithms.h
 CMakeFiles/Code.dir/main.cpp.o: ../TSP.h
 CMakeFiles/Code.dir/main.cpp.o: ../main.cpp
 

@@ -4,7 +4,7 @@ Sort::Sort(){executionTime = 0;data = {};}
 
 Sort::~Sort(){};
 
-void Sort::load(char* fileName){
+void Sort::load(string fileName){
     data = {};
     ifstream inFile(fileName);
     if(!inFile.is_open())
@@ -31,14 +31,20 @@ void Sort::execute(){
 }
 
 void Sort::display(){
+    cout << "Sort Display:\n\t";
     for(int i = 0; i < data.size()-1; i++)
         cout << data[i] << ",";
     cout << data[data.size()-1] << endl;
 }
 
 void Sort::stats(){
+    cout << "Sort Stats:\n\t";
     cout << algName << " executed in " << executionTime
     << " microseconds with " << data.size() << " elements" << endl;
+    cout << "\t";
+    for(int i = 0; i < data.size()-1; i++)
+        cout << data[i] << ",";
+    cout << data[data.size()-1] << endl;
 }
 
 void Sort::select(string sortType){
@@ -54,7 +60,7 @@ void Sort::select(string sortType){
     }
 }
 
-void Sort::save(char* filePath){
+void Sort::save(string filePath){
     ofstream outFile(filePath);
     if(!outFile.is_open())
         cout << "output file not open" << endl;
@@ -62,6 +68,8 @@ void Sort::save(char* filePath){
         outFile << data[i] << endl;
 }
 
-void Sort::configure(){
+void Sort::configure(string configuration){
     //Future expandability
 }
+
+void Sort::passArgs(int arg1, int arg2) {}

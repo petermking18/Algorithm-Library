@@ -19,13 +19,14 @@ private:
     public:
     Sort();
     ~Sort();
-    void load(char* fileName);
+    void load(string);
     void execute();
     void display();
     void stats();
     void select(string sortType);
-    void save(char* filePath);
-    void configure();
+    void save(string filePath);
+    void configure(string);
+    void passArgs(int,int);
 };
 
 
