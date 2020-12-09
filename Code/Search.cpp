@@ -213,7 +213,7 @@ void Search::display(){
 }
 
 void Search::stats(){
-    cout << "Stats: " << endl;
+    cout << "Search Stats: " << endl;
     cout << "   Algorithm: " << activeAlg << " on " << graphType << endl;
     cout << "   Graph File: " << file << endl;
     cout << "   Execution Time: " << executionTime << " microseconds" << endl;
@@ -253,7 +253,7 @@ void Search::select(string searchType){
     activeAlg = searchType;
 }
 
-void Search::save(char* filePath){
+void Search::save(string filePath){
     ofstream outFile(filePath,ios_base::app);
     //Graph Size,Algorithm,Graph Type,Nodes in Path,Nodes Explored,Execution Time(microseconds),Cost of Path
     outFile << alist.size()-1 << "," << activeAlg << "," << graphType << "," << path.size() << "," << nodesExplored << "," << executionTime << "," << cost << endl;

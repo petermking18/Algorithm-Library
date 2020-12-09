@@ -6,7 +6,9 @@ TSP::TSP(int num) {numNodes = num; checkEdges = true;ga_elitism = true;sa_elitis
 ////Strategy Pattern
 ////////////////////
 void TSP::load(string path){
-    AdjacencyMatrix fullMatrix = FileRead::read_graph_unweighted_matrix("../../Data/Graph/graph.txt");
+    string graphPath = path + "graph.txt";
+    string positionsPath = path + "positions.txt";
+    AdjacencyMatrix fullMatrix = FileRead::read_graph_unweighted_matrix(graphPath);
     ///Limit number of nodes in graph
     for(int r = 0; r < numNodes+1; r++){
         vector<bool> newRow;
@@ -14,13 +16,13 @@ void TSP::load(string path){
         graph.push_back(newRow);
     }
 
-    map<int,Node> allPositions = FileRead::readPositions_map_node("../../Data/Graph/positions.txt");
+    map<int,Node> allPositions = FileRead::readPositions_map_node(positionsPath);
     ///Limit number of nodes in positions
     for(auto it : allPositions) {
         if (it.first <= numNodes) positions.insert(it);
     }
 
-    DistanceMatrix fullDMat = FileRead::read_distance_matrix("../../Data/Graph/");
+    DistanceMatrix fullDMat = FileRead::read_distance_matrix(path);
     ///Limit number of nodes in dMat
     for(int r = 0; r < numNodes; r++){
         vector<float> newRow;
@@ -28,13 +30,13 @@ void TSP::load(string path){
         dMat.push_back(newRow);
     }
 
-    CityList fullCl = FileRead::read_city_list("../../Data/Graph/");
+    CityList fullCl = FileRead::read_city_list(path);
     ///Limit number of nodes in citylist
     for(int i = 0; i < numNodes; i++){
         citylist.push_back(fullCl[i]);
     }
 
-    PositionsVector fullPos = FileRead::readPositions_vector("../../Data/Graph/positions.txt");
+    PositionsVector fullPos = FileRead::readPositions_vector(positionsPath);
     ///Limit number of nodes in pos
     for(int i = 0; i < numNodes; i++){
         pos.push_back(fullPos[i]);

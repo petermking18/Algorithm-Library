@@ -37,7 +37,7 @@ public:
     void display();
     void stats();
     void select(string searchType);
-    void save(char* filePath);
+    void save(string filePath);
     void configure(string);
     void passArgs(int,int);
     double calcCost();

@@ -48,13 +48,13 @@ void Sort::stats(){
 }
 
 void Sort::select(string sortType){
-    if(sortType == "bubble"){
+    if(sortType == "Bubble"){
         activeAlg = reinterpret_cast<vector<int> (*)(vector<int> &)>(&SortAlgorithms::bubble);
         algName = "Bubble Sort";
-    }else if(sortType == "merge"){
+    }else if(sortType == "Merge"){
         activeAlg = reinterpret_cast<vector<int> (*)(vector<int> &)>(&SortAlgorithms::merge);
         algName = "Merge Sort";
-    }else if(sortType == "insertion"){
+    }else if(sortType == "Insertion"){
         activeAlg = reinterpret_cast<vector<int> (*)(vector<int> &)>(&SortAlgorithms::insertion);
         algName = "Insertion Sort";
     }
