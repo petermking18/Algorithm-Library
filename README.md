@@ -1,6 +1,6 @@
 # Algorithm-Library
 A collection of sorting and searching algorithms in C++. There is example code in `main.cpp` that demonstrates the usage of the library.
-### Sorging Algorithms:
+### Sorting Algorithms:
 - Bubble Sort
 - Merge Sort
 - Insertion Sort
